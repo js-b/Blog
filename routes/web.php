@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $hero = "Invoker"; // Создание переменной
-    return view('welcome', compact('hero')); // передача переменной исполльзуя compact()
+    return view('welcome'); // передача переменной исполльзуя compact()
 });
 
 Route::get('/laravel', function () {
     return view('laravel'); 
 });
-Route::get('/DBTest', function(){
-    $posts = App\Models\Posts::all();// Создаем переменную с данными и БД
-    return view('DBTest', compact('posts'));// методом компакт отправляем даннные
-});
+
+Route::get('/DBTest', [PostController::class, 'Post']);
+
+// Route::get('/DBTest', function(){
+//     $posts = App\Models\Posts::all();// Создаем переменную с данными и БД
+//     return view('DBTest', compact('posts'));// методом компакт отправляем даннные
+// });

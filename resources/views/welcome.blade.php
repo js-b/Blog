@@ -10,7 +10,7 @@
     <h1>Главная страница</h1>
     <a href="/laravel">laravel</a><br>
     <!-- двойные фигурные скобки для передачи переменной -->
-    <p>{{ $hero }}</p>
+    
     <a href="/DBTest">DBtest</a>
 
 </body>
