@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/laravel', function () {
     return view('laravel'); 
 });
+Route::get('/DBTest', function(){
+    $posts = DB::table('posts')->get();// Создаем переменную с данными и БД
+    return view('DBTest', compact('posts'));// методом компакт отправляем даннные
+});
