@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $hero = "Invoker"; // Создание переменной
+    return view('welcome', compact('hero')); // передача переменной исполльзуя compact()
 });
+
 Route::get('/laravel', function () {
-    return view('laravel');
+    return view('laravel'); 
 });
