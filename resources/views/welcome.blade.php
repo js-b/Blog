@@ -23,5 +23,7 @@
     <body class="antialiased">
         
         ПРИВЕТ КАРАКАЛПАКСТАН
+
+        <a href="/laravel">Ларавер</a>
     </body>
 </html>
